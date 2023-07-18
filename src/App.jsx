@@ -37,7 +37,7 @@ function App() {
   return (
     <div className="grid grid-rows-[auto,1fr] gap-1.5 h-screen bg-background p-2">
       <Navbar layout={layout} page={page} navigateTo={setPage}/>
-      <section className="h-full"><Screen/></section>
+      <section className="h-full"><Screen layout={layout}/></section>
     </div>
   );
 }
