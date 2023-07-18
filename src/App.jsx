@@ -1,6 +1,26 @@
 import { useEffect, useState } from "react";
 import { Navbar } from "./components/Navbar";
 import * as Screens from "./screens"
+import { WebSocketConnection } from "./data/ws";
+
+
+//Temporary (Example / Test) code for websocket connection
+const ws = new WebSocketConnection()
+
+ws.useAuth((event)=>{
+  return new Promise((resolve)=>{
+    console.log("Got a request for credential")
+    resolve({
+      type: 0,
+      username: "aoi",
+      password: "pass"
+    })
+  })
+})
+
+ws.useDataUpdates((data)=>{
+  console.log("Data updated: ", data)
+})
 
 function App() {
   const [page, setPage] = useState("home")

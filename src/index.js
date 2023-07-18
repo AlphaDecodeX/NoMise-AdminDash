@@ -11,4 +11,4 @@ root.render(
   </React.StrictMode>
 );
 
-reportWebVitals(console.log); //TODO Report analytics to the server https://bit.ly/CRA-vitals
+// reportWebVitals(console.log); //TODO Report analytics to the server https://bit.ly/CRA-vitals
